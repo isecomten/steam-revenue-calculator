@@ -14,8 +14,8 @@ class Toolbar extends React.Component {
             <div className="sidebar">
                 <ProSidebar
                     className={this.state.collapsed ? "collapsed xs" : "xs"}
-                    onMouseEnter={console.log('Enter')}
-                    onMouseLeave={console.log('Leave')}
+                    onMouseEnter={() => this.setState({ collapsed: false })}
+                    onMouseLeave={() => this.setState({ collapsed: true })}
                 >
                     <Menu>
                         <MenuItem>Steam Revenue Calculator</MenuItem>

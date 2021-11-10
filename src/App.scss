@@ -1,10 +1,14 @@
+@import "./react-toggle.scss";
 .App {
   background-color: #1f232e;
   display: grid;
   grid-template-rows: 60px auto;
-  grid-template-columns: 80px auto;
+  grid-template-columns: 1fr 5fr 1fr;
+  height: 100vh;
 }
 .rc {
+  grid-column-start: 2;
+  grid-column-end: 3;
   padding: 20px;
   color: white;
   font-weight: 100;
@@ -29,13 +33,12 @@
 .topbar {
   grid-row-start: 1;
   grid-row-end: 2;
-  grid-column-start: 2;
-  grid-column-end: 3;
-}
-.sidebar {
-  height: 100vh;
-  grid-row-start: 1;
-  grid-row-end: 3;
   grid-column-start: 1;
-  grid-column-end: 2;
+  grid-column-end: 4;
+}
+.footer {
+  color: white;
+  text-align: center;
+  grid-column-start: 1;
+  grid-column-end: 4;
 }

@@ -5,7 +5,6 @@ import Topbar from './components/Topbar';
 function App() {
   return (
     <div className="App">
-      <Toolbar></Toolbar>
       <Topbar></Topbar>
       <RevenueCalculator></RevenueCalculator>
     </div>

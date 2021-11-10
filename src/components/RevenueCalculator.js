@@ -1,5 +1,6 @@
 import React from "react";
 import { Form, FormControl, FormGroup, FormLabel } from "react-bootstrap";
+import Footer from "./Footer";
 class RevenueCalculator extends React.Component {
     constructor(props) {
         super(props);
@@ -39,6 +40,7 @@ class RevenueCalculator extends React.Component {
                     <h5>TOTAL REVENUE:</h5>
                     <h1>${(Math.round(this.state.numOfReviews * this.state.price * 45 * 100) / 100).toFixed(2)}</h1>
                 </div>
+                <Footer />
             </div>
         );
     }

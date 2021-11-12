@@ -8,12 +8,16 @@ class PricePointView extends React.Component {
             games: []
         };
     }
-    componentDidMount() {
-        this.setState({ games: this.state.dataRetriever.GetGamesByPricePoint() });
+    async componentDidMount() {
+        const games = await dataRetriever.GetGamesByPricePoint();
+        this.setState({ games: games });
     }
     render() {
         return (
-            <div>
+            <div className="pp">
+                Average Revenue: {this.state.games.averageRevenue}
+                Average Review Count: {this.state.games.averageReviewCount}
+
                 <Footer></Footer>
             </div>
         );

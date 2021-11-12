@@ -5,7 +5,7 @@ export const dataRetriever = {
         return games.data;
     },
     GetGamesByPricePoint: async function () {
-        const games = await axios.get('http://localhost:5000/pricepoint/')
+        const games = await axios.get('http://localhost:5000/games/price/2/')
         return games.data;
     }
 }
